@@ -23,6 +23,8 @@ const charRange = (start, end) =>
     String.fromCharCode(code)
   );
 
+const evalFormula = (x, cells) => {};
+
 window.onload = () => {
   const container = document.getElementById("container");
   const createLabel = (name) => {
@@ -49,6 +51,6 @@ window.onload = () => {
 const update = (event) => {
   const element = event.target;
   const value = element.value.replace(/\s/g, "");
-  if (!value.includes(element.id)) {
+  if (!value.includes(element.id) && value.startsWith("=")) {
   }
 };
